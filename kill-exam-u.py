@@ -1,8 +1,8 @@
 #Copyright Bail 2024
-#kill-exam-u 重邮c语言考试防作弊软件杀手 v1.0.2_3
-#2024.10.27-2024.10.29
+#kill-exam-u 重邮c语言考试防作弊软件杀手 v1.0.3_4
+#2024.10.27-2024.11.7
 
-PROCNAME = 'EXAM-U.exe'
+PROCNAME = 'anti-cheat.exe'
 
 import sys,os,psutil
 
