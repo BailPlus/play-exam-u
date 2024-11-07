@@ -1,13 +1,15 @@
 #Copyright Bail 2024
-#fake-exam-u 假的重邮c语言考试防作弊软件 v1.0_1
-#2024.10.29
+#fake-exam-u 假的重邮c语言考试防作弊软件 v1.1_2
+#2024.10.29-2024.11.7
 
-URL_PREFIX = 'http://172.22.181.82/test/api/ping?machineId='
+from flask import Flask,make_response
 
-import requests,time
+app = Flask(__name__)
+@app.route('/go.json')
+def fake():
+    res = make_response('20210056')
+    res.headers = {'Access-Control-Allow-Origin':'*'}
+    return res
 
-machine_id = input('请手动抓包获取machineId并输入到此处 >')
 print('即将开始假扮防作弊软件，请勿关闭本窗口。如考试结束，则可放心关闭。')
-while True:
-    requests.get(URL_PREFIX+machine_id)
-    time.sleep(1)
+app.run(port=7878)
