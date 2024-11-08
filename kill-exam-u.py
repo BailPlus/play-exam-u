@@ -1,13 +1,13 @@
 #Copyright Bail 2024
-#kill-exam-u 重邮c语言考试防作弊软件杀手 v1.0.3_4
-#2024.10.27-2024.11.7
+#kill-exam-u 重邮c语言考试防作弊软件杀手 v1.0.3.1_5
+#2024.10.27-2024.11.8
 
 PROCNAME = 'anti-cheat.exe'
 
 import sys,os,psutil
 
 def kill_examu():
-    os.system('taskkill /f /im EXAM-U.exe')
+    os.system(f'taskkill /f /im {PROCNAME}')
 def delete_examu():
     ps = psutil.pids()
     for i in ps:
